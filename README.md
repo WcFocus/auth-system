@@ -1,3 +1,5 @@
+# se que debia ser pribado el repositorio pero es apra poder enviarlo como enlace por correo
+
 # Sistema de Autenticación y Gestión de Usuarios
 
 Este proyecto es un sistema de autenticación y gestión de usuarios con roles y permisos 
