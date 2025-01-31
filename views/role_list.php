@@ -67,7 +67,7 @@ $roles = Role::getAll();
             return;
         }
 
-        const response = await fetch('../api/role_delete.php', {
+        const response = await fetch('../views/role_delete.php', {
             method: 'POST',
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('token'),
