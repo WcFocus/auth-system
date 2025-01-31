@@ -25,5 +25,14 @@
     
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<?php
+// Encriptar la contraseña '1234'
+$password = '1234';
+$hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+echo $hashedPassword;
+?>
+
 </body>
 </html>
