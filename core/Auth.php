@@ -83,5 +83,17 @@ public static function canEditUser($userToEditId) {
     // Los usuarios solo pueden editar su propio perfil
     return $userToEditId == $user->id;
 }
+    // Verifica si el usuario tiene permisos para eliminar usuarios
+    public static function canDeleteUser($userToDeleteId) {
+        $user = self::getUser();
+        // Solo SuperAdmins pueden eliminar usuarios
+        return $user->role_id == 1;
+    }
 
+    // Verifica si el usuario tiene permisos para gestionar roles
+    public static function canManageRoles() {
+        $user = self::getUser();
+        // Solo los SuperAdmins pueden gestionar roles
+        return $user->role_id == 1;
+    }
 }
