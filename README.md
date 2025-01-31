@@ -24,3 +24,62 @@ JS y CSS.
    user@user.com     user
 
 
+
+
+
+##problema resuelto
+
+6. El Problema: PHP 7 vs PHP 8.1+
+## Compatibilidad PHP 7 vs PHP 8.1+
+
+class Usuario { 
+    public string $nombre; 
+
+    public function getNombre(): string { 
+        return $this->nombre; 
+    } 
+} 
+
+$usuario = new Usuario(); 
+echo $usuario->getNombre(); 
+
+
+warning o error debido a la inicialización de una propiedad tipada. A partir de PHP 8.0, las propiedades tipadas (como public string $nombre) deben ser inicializadas antes de ser accedidas. Si no se inicializan
+
+
+¿Cómo solucionar el error en PHP 8.1+?
+
+inicialiso primero
+
+class Usuario { 
+    public string $nombre = ''; // Inicializar con un valor por defecto
+
+    public function getNombre(): string { 
+        return $this->nombre; 
+    } 
+} 
+
+$usuario = new Usuario(); 
+echo $usuario->getNombre(); // No generará error
+
+e inicializo constructor
+class Usuario { 
+    public string $nombre; 
+
+    public function __construct() {
+        $this->nombre = ''; // Inicializar en el constructor
+    }
+
+    public function getNombre(): string { 
+        return $this->nombre; 
+    } 
+} 
+
+$usuario = new Usuario(); 
+echo $usuario->getNombre(); // No generará error
+
+
+
+
+En PHP 8.1+, las propiedades tipadas deben estar inicializadas antes de ser accedidas. Para resolver este problema, se inicializó la propiedad `$nombre` en la definición de la clase:
+public string $nombre = '';
