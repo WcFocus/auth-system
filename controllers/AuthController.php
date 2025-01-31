@@ -1,4 +1,6 @@
 <?php
+require_once(__DIR__ . '/../core/Auth.php');  // Usamos __DIR__ para la ruta
+require_once(__DIR__ . '/../models/User.php'); // Usamos __DIR__ para la ruta
 
 class AuthController {
     // Método para mostrar el formulario de login y manejar el login
