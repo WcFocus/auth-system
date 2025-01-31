@@ -33,7 +33,7 @@ class AuthController {
                 echo "Invalid login credentials!";
             }
         } else {
-            require_once(__DIR__ . '/../public/index.php');  // Corregir ruta
+            require_once(__DIR__ . '/../views/login.php');  // Corregir ruta
         }
     }
 
@@ -46,9 +46,4 @@ class AuthController {
         exit();
     }
 }
-
-
-
-
-
 ?>
