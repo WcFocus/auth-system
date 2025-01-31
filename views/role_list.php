@@ -16,7 +16,7 @@ $user = Auth::getUser();
 
 // Verificar si el usuario tiene permisos de administrador o superior
 if (!in_array($user->role_id, [1, 2])) {
-    echo "<h3>No tienes permisos para acceder a esta página.</h3>";
+    echo "<div class='container mt-5'><div class='alert alert-danger' role='alert'>No tienes permisos para acceder a esta página.</div></div>";
     exit();
 }
 
@@ -34,28 +34,31 @@ $roles = Role::getAll();
 </head>
 <body>
     <div class="container mt-5">
-        <h2 class="mb-4">Lista de Roles</h2>
-        <table class="table table-bordered">
-            <thead class="table-dark">
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($roles as $role): ?>
+        <div class="card shadow-sm p-4">
+            <h2 class="mb-4 text-center">Lista de Roles</h2>
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
                     <tr>
-                        <td><?php echo htmlspecialchars($role['id']); ?></td>
-                        <td><?php echo htmlspecialchars($role['role_name']); ?></td>
-                        <td>
-                            <a href="role_edit.php?id=<?php echo $role['id']; ?>" class="btn btn-primary btn-sm">Editar</a>
-                            <button onclick="deleteRole(<?php echo $role['id']; ?>)" class="btn btn-danger btn-sm">Eliminar</button>
-                        </td>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <?php foreach ($roles as $role): ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($role['id']); ?></td>
+                            <td><?php echo htmlspecialchars($role['role_name']); ?></td>
+                            <td>
+                                <a href="role_edit.php?id=<?php echo $role['id']; ?>" class="btn btn-primary btn-sm">Editar</a>
+                                <button onclick="deleteRole(<?php echo $role['id']; ?>)" class="btn btn-danger btn-sm">Eliminar</button>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            <a href="../public/dashboard.php" class="btn btn-secondary mt-3">Volver al Dashboard</a>
+        </div>
     </div>
 
     <script>
