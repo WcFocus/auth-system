@@ -25,9 +25,19 @@ JS y CSS.
 
 
 
+***punto 1 se creo la base de datos segun lo indicado***
 
+***punto 2 de realizo control de acceso de roles y permisos***
 
-##problema resuelto
+***realice autenticacion de usuairo pero a travez de sesiones ya que aun no tengo muy claro a traves de JWT sin librerias***
+
+***no realice la documentacion del Endpont API porque no puede implementar en el tiempo el JWT sin embargo realice un codigo base para dar los tokens con las sesiones***
+
+***realice las interfaces solicitadas***
+
+***adjunto solucion de problema de compatibildiad de codigo***
+
+#problema resuelto
 
 6. El Problema: PHP 7 vs PHP 8.1+
 ## Compatibilidad PHP 7 vs PHP 8.1+
