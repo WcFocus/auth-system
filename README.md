@@ -31,7 +31,7 @@ JS y CSS.
 
 ***punto 2 de realizo control de acceso de roles y permisos***
 
-***realice autenticacion de usuairo pero a travez de sesiones ya que aun no tengo muy claro a traves de JWT sin librerias***
+***realice autenticacion de usuairo pero a travex de sesiones ya que aun no tengo muy claro a traves de JWT sin librerias***
 
 ***no realice la documentacion del Endpont API porque no puede implementar en el tiempo el JWT sin embargo realice un codigo base para dar los tokens con las sesiones***
 
