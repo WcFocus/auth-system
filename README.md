@@ -1,4 +1,4 @@
-# se que debia ser privado el repositorio pero es para poder enviarlo como enlace por correo
+
 
 # Sistema de Autenticación y Gestión de Usuarios
 
